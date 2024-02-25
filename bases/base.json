@@ -1,0 +1,523 @@
+{
+  "variables" : [
+    {
+      "name" : "Name",
+      "values" : [
+        "Acorus calamus",
+        "Aechmea ‘Royal Wine’",
+        "Agave Americana ‘Marginata’",
+        "Aloe brevifolia",
+        "Beaucarnea recurvata",
+        "Calceolaria crenatiflora",
+        "Ceropegia woodii",
+        "Dracaena deremensis ‘Janet Craig’",
+        "Euphorbia pulcherrima",
+        "Ficus lyrata",
+        "Fittonia verschaffeltii",
+        "Gasteria hybrida",
+        "Guzmania lingulata ‘Major’",
+        "Mammillaria bocasana",
+        "Monstera deliciosa",
+        "Opuntia vilis",
+        "Phoenix roebelenii",
+        "Syngonium podophyllum",
+        "Zebrina pendula",
+        "Araliaceae"
+      ]
+    },
+    {
+      "name" : "Common Name",
+      "values" : [
+        "Sweet Flag",
+        "Royal Wine Bromeliad",
+        "American aloe",
+        "Brevifolia Aloe",
+        "Ponytail",
+        "Slipperwort",
+        "Rosary Vine",
+        "Janet Craig",
+        "Poinsettia",
+        "Fiddle-Leaf Fig",
+        "Red-Nerved Fittonia",
+        "Ox Tongue",
+        "Scarlet Star",
+        "Powder Puff",
+        "Philodendron Pertusum",
+        "Little Tree Cactus",
+        "Pigmy Date Palm",
+        "Nephthytis",
+        "Wandering Jew",
+        "Caladium"
+      ]
+    },
+    {
+      "name" : "Toxicity",
+      "values" : [
+        "toxic",
+        "non toxic"
+      ]
+    },
+    {
+      "name" : "Brightness",
+      "values" : [
+        "Indirect Sunlight",
+        "Direct Sunlight"
+      ]
+    },
+    {
+      "name" : "Temperature",
+      "values" : [
+        "18-25°C",
+        "13-20°C",
+        "20-28°C"
+      ]
+    },
+    {
+      "name" : "Humidity",
+      "values" : [
+        "60%",
+        "70%",
+        "80%"
+      ]
+    },
+    {
+      "name" : "Watering",
+      "values" : [
+        "1 times/week",
+        "2 times/week",
+        "3 times/week"
+      ]
+    },
+    {
+      "name" : "Lighting",
+      "values" : [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name" : "Ease of care",
+      "values" : [
+        "easy",
+        "average",
+        "difficult"
+      ]
+    }
+  ],
+  "target" : "Common Name",
+  "memory" : [
+    {
+      "variable" : "Ease of care",
+      "condition" : "=",
+      "value" : "easy"
+    },
+    {
+      "variable" : "Toxicity",
+      "condition" : "=",
+      "value" : "toxic"
+    },
+    {
+      "variable" : "Lighting",
+      "condition" : "=",
+      "value" : "medium"
+    },
+    {
+      "variable" : "Watering",
+      "condition" : "=",
+      "value" : "1 times/week"
+    }
+  ],
+  "knowledge base" : [
+    {
+      "label" : "Sweet Flag",
+      "antecedents" :[
+        {
+          "variable" : "Ease of care",
+          "condition" : "=",
+          "value" : "easy"
+        },
+        {
+          "variable" : "Toxicity",
+          "condition" : "=",
+          "value" : "toxic"
+        },
+        {
+          "variable" : "Lighting",
+          "condition" : "=",
+          "value" : "medium"
+        },
+        {
+          "variable" : "Watering",
+          "condition" : "=",
+          "value" : "1 times/week"
+        }
+      ],
+      "consequent" : {
+        "variable" : "Common Name",
+        "condition" : "=",
+        "value" : "Sweet Flag"
+      }
+    },
+    {
+      "label" : "Ox Tongue",
+      "antecedents": [
+        {
+          "variable": "Lighting",
+          "condition": "=",
+          "value": "low"
+        },
+        {
+          "variable" : "Toxicity",
+          "condition" : "=",
+          "value" : "non toxic"
+        },
+        {
+          "variable": "Watering",
+          "condition": "=",
+          "value": "3 times/week"
+        }
+      ],
+      "consequent": {
+        "variable": "Common Name",
+        "condition": "=",
+        "value": "Ox Tongue"
+      }
+    },
+    {
+      "label" : "Slipperwort",
+      "antecedents": [
+        {
+          "variable": "Watering",
+          "condition": "=",
+          "value": "1 times/week"
+        },
+        {
+          "variable": "Ease of care",
+          "condition": "=",
+          "value": "easy"
+        }
+      ],
+      "consequent": {
+        "variable": "Common Name",
+        "condition": "=",
+        "value": "Slipperwort"
+      }
+    },
+    {
+      "label" : "Ponytail",
+      "antecedents": [
+        {
+          "variable": "Watering",
+          "condition": "=",
+          "value": "3 times/week"
+        },
+        {
+          "variable": "Ease of care",
+          "condition": "=",
+          "value": "difficult"
+        },
+        {
+          "variable" : "Toxicity",
+          "condition" : "=",
+          "value" : "non toxic"
+        },
+        {
+          "variable": "Lighting",
+          "condition": "=",
+          "value": "low"
+        }
+      ],
+      "consequent": {
+        "variable": "Common Name",
+        "condition": "=",
+        "value": "Ponytail"
+      }
+    },
+    {
+      "label" : "Brevifolia Aloe",
+      "antecedents": [
+        {
+          "variable": "Watering",
+          "condition": "=",
+          "value": "3 times/week"
+        },
+        {
+          "variable": "Ease of care",
+          "condition": "=",
+          "value": "difficult"
+        },
+        {
+          "variable" : "Toxicity",
+          "condition" : "=",
+          "value" : "non toxic"
+        },
+        {
+          "variable": "Lighting",
+          "condition": "=",
+          "value": "high"
+        }
+      ],
+      "consequent": {
+        "variable": "Common Name",
+        "condition": "=",
+        "value": "Brevifolia Aloe"
+      }
+    },
+    {
+      "label": "Powder Puff",
+      "antecedents": [
+        {
+          "variable": "Watering",
+          "condition": "=",
+          "value": "3 times/week"
+        },
+        {
+          "variable": "Ease of care",
+          "condition": "=",
+          "value": "difficult"
+        },
+        {
+          "variable": "Toxicity",
+          "condition": "=",
+          "value": "non toxic"
+        },
+        {
+          "variable": "Lighting",
+          "condition": "=",
+          "value": "low"
+        }
+      ],
+      "consequent": {
+        "variable": "Common Name",
+        "condition": "=",
+        "value": "Powder Puff"
+      }
+    },
+    {
+      "label": "Scarlet Star",
+      "antecedents": [
+        {
+          "variable": "Watering",
+          "condition": "=",
+          "value": "3 times/week"
+        },
+        {
+          "variable": "Ease of care",
+          "condition": "=",
+          "value": "difficult"
+        },
+        {
+          "variable": "Toxicity",
+          "condition": "=",
+          "value": "non toxic"
+        },
+        {
+          "variable": "Lighting",
+          "condition": "=",
+          "value": "low"
+        }
+      ],
+      "consequent": {
+        "variable": "Common Name",
+        "condition": "=",
+        "value": "Scarlet Star"
+      }
+    },
+    {
+      "label" : "Philodendron Pertusum",
+      "antecedents": [
+        {
+          "variable": "Watering",
+          "condition": "=",
+          "value": "2 times/week"
+        },
+        {
+          "variable": "Ease of care",
+          "condition": "=",
+          "value": "average"
+        },
+        {
+          "variable" : "Toxicity",
+          "condition" : "=",
+          "value" : "non toxic"
+        },
+        {
+          "variable": "Lighting",
+          "condition": "=",
+          "value": "low"
+        }
+      ],
+      "consequent": {
+        "variable": "Common Name",
+        "condition": "=",
+        "value": "Philodendron Pertusum"
+      }
+    },
+    {
+      "label": "Little Tree Cactus",
+      "antecedents": [
+        {
+          "variable": "Watering",
+          "condition": "=",
+          "value": "3 times/week"
+        },
+        {
+          "variable": "Ease of care",
+          "condition": "=",
+          "value": "difficult"
+        },
+        {
+          "variable": "Toxicity",
+          "condition": "=",
+          "value": "non toxic"
+        },
+        {
+          "variable": "Lighting",
+          "condition": "=",
+          "value": "low"
+        }
+      ],
+      "consequent": {
+        "variable": "Common Name",
+        "condition": "=",
+        "value": "Little Tree Cactus"
+      }
+    },
+    {
+      "label": "Pigmy Date Palm",
+      "antecedents": [
+        {
+          "variable": "Watering",
+          "condition": "=",
+          "value": "2 times/week"
+        },
+        {
+          "variable": "Ease of care",
+          "condition": "=",
+          "value": "average"
+        },
+        {
+          "variable": "Toxicity",
+          "condition": "=",
+          "value": "non toxic"
+        },
+        {
+          "variable": "Lighting",
+          "condition": "=",
+          "value": "low"
+        }
+      ],
+      "consequent": {
+        "variable": "Common Name",
+        "condition": "=",
+        "value": "Pigmy Date Palm"
+      }
+    },
+    {
+      "label": "Nephthytis",
+      "antecedents": [
+        {
+          "variable": "Watering",
+          "condition": "=",
+          "value": "2 times/week"
+        },
+        {
+          "variable": "Ease of care",
+          "condition": "=",
+          "value": "average"
+        },
+        {
+          "variable": "Toxicity",
+          "condition": "=",
+          "value": "non toxic"
+        },
+        {
+          "variable": "Lighting",
+          "condition": "=",
+          "value": "medium"
+        }
+      ],
+      "consequent": {
+        "variable": "Common Name",
+        "condition": "=",
+        "value": "Nephthytis"
+      }
+    },
+    {
+      "label": "Wandering Jew",
+      "antecedents": [
+        {
+          "variable": "Watering",
+          "condition": "=",
+          "value": "2 times/week"
+        },
+        {
+          "variable": "Ease of care",
+          "condition": "=",
+          "value": "average"
+        },
+        {
+          "variable": "Toxicity",
+          "condition": "=",
+          "value": "non toxic"
+        },
+        {
+          "variable": "Lighting",
+          "condition": "=",
+          "value": "high"
+        }
+      ],
+      "consequent": {
+        "variable": "Common Name",
+        "condition": "=",
+        "value": "Wandering Jew"
+      }
+    },
+    {
+      "label": "easy",
+      "antecedents": [
+        {
+          "variable": "Watering",
+          "condition": "=",
+          "value": "1 times/week"
+        }
+      ],
+      "consequent": {
+        "variable": "Ease of care",
+        "condition": "=",
+        "value": "easy"
+      }
+    },
+    {
+      "label": "average",
+      "antecedents": [
+        {
+          "variable": "Watering",
+          "condition": "=",
+          "value": "2 times/week"
+        }
+      ],
+      "consequent": {
+        "variable": "Ease of care",
+        "condition": "=",
+        "value": "average"
+      }
+    },
+    {
+      "label": "difficult",
+      "antecedents": [
+        {
+          "variable": "Watering",
+          "condition": "=",
+          "value": "3 times/week"
+        }
+      ],
+      "consequent": {
+        "variable": "Ease of care",
+        "condition": "=",
+        "value": "difficult"
+      }
+    }
+  ]
+}
